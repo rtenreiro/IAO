@@ -1,0 +1,58 @@
+El proceso paso a paso es el siguiente:
+
+Paso 1: Descargar e Instalar Python
+Ve al sitio oficial de Python: https://www.python.org/downloads/.
+
+Haz clic en el botón "Download Python 3.x.x" (la última versión disponible). Esto descargará un archivo python-<version>.exe. Ejecuta el archivo que acabas de descargar. En la ventana de instalación, selecciona "Add Python 3.x to PATH" para que Python se agregue automáticamente a las variables de entorno del sistema. Luego, haz clic en "Install Now".
+
+Paso 2: Instalar Anaconda (para gestionar entornos y dependencias)
+Descargar Anaconda: Ve a la página de descargas de Anaconda: https://www.anaconda.com/products/individual#download-section.
+
+Descarga el instalador de Anaconda para Windows 64-bit (en mi caso). 
+
+Instalar Anaconda: Ejecuta el archivo de instalación descargado (Anaconda3-<versión>-Windows-x86_64.exe). Sigue los pasos del instalador: Acepta el acuerdo de licencia.
+
+Selecciona la opción "Just Me" para instalar solo para tu cuenta de usuario.
+Marca la opción "Add Anaconda3 to my PATH environment variable" y "Register Anaconda as my default Python". Haz clic en "Install".
+
+Paso 3: Crear un entorno virtual para TensorFlow (esto lo harás para cada uno de los entornos que necesites). 
+
+Abre Anaconda Prompt y ejecuta el siguiente comando para crear un entorno llamado tensorf con Python 3.8 (recomendado para TensorFlow):
+conda create --name tensorf python=3.8
+
+Activa el entorno que acabas de crear con el siguiente comando:
+conda activate tensorf
+
+Instalar TensorFlow: Para instalar TensorFlow, ejecuta:
+conda install -c conda-forge tensorflow
+
+Paso 4: Instalar Jupyter Notebook y librerías en el entorno
+Instalar Jupyter Notebook y resto librerías principales:
+conda install jupyter
+conda install pytorch torchvision torchaudio cpuonly -c pytorch
+conda install numpy pandas matplotlib scikit-learn seaborn
+
+Ejecutar Jupyter Notebook: Lanza Jupyter Notebook ejecutando:
+jupyter notebook
+
+Esto abrirá el entorno de Jupyter Notebook en tu navegador predeterminado.
+
+Paso 5: Configurar tu entorno para usar códigos de GitHub
+Instalar Git (para clonar repositorios)
+
+Visita: https://git-scm.com/ y descarga el instalador de Git para Windows.
+
+Sigue los pasos del instalador y asegúrate de marcar la opción "Use Git from the command line and also from 3rd-party software".
+
+Clonar un repositorio de GitHub: Para clonar un repositorio de GitHub, primero navega al directorio donde deseas clonar el proyecto en Anaconda Prompt o CMD, y ejecuta el siguiente comando:
+git clone https://github.com/rtenreiro/Machine-Learning---Inteligencia-Artificial-para-todos-con-ejemplos-
+
+Paso 6: Probar TensorFlow en Jupyter Notebook
+Abre Jupyter Notebook y crea un nuevo cuaderno dentro del entorno tensorf.
+Verificar la instalación de TensorFlow:
+
+En una nueva celda de Jupyter, escribe el siguiente código para comprobar que TensorFlow está correctamente instalado:
+import TensorFlow as tf
+print(tf.__version__)
+
+Con esto, tendrás un entorno completamente configurado y listo para trabajar con modelos de Machine Learning, tanto en Jupyter Notebook como en otros entornos de desarrollo en tu máquina Windows 11.
